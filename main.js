@@ -13,18 +13,22 @@ fetch('../elements/navbar.html')
 
   // ------- DAY OF THE WEEK -------- //
 
-function displayDate() {
-  const date = new Date();
-  const options = {
-    day: 'numeric', month: 'long', year: 'numeric'
-  };
-  const formattedDate = date.toLocaleDateString('en-GB', options);
 
-  const message = `WELCOME TO THE WEEK OF ${formattedDate.toUpperCase()}!`;
+document.addEventListener("DOMContentLoaded", function() {
+  function displayDate() {
+    const date = new Date();
+    const options = {
+      day: 'numeric', month: 'long', year: 'numeric'
+    };
+    const formattedDate = date.toLocaleDateString('en-GB', options);
 
-  document.getElementById('date').innerHTML = message;
-}
-displayDate();
+    const message = `WELCOME TO THE WEEK OF ${formattedDate.toUpperCase()}!`;
+
+    document.getElementById('date').innerHTML = message;
+  }
+
+  displayDate();
+});
 
 
 
