@@ -1,6 +1,6 @@
 // ------- LOAD NAVBAR EACH RECIPE -------- //
 
-fetch('/elements/navbar.html')
+fetch('./elements/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('navbar-placeholder').innerHTML = data;
