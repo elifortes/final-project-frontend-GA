@@ -436,7 +436,7 @@ hr.section-divider {
 
 /* ----- FOOTER ------- */
 
-#footer-pages {
+.footer-pages {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-color: #1E3E62;
