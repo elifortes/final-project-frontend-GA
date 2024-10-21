@@ -8,16 +8,6 @@ fetch('../elements/navbar.html')
   .catch(error => console.error('Error loading navbar:', error));
 
 
-// ------- LOAD FOOTER EACH RECIPE -------- //
-
-fetch('../elements/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-pages').innerHTML = data;
-  })
-  .catch(error => console.error('Error loading footer:', error));
-
-
   // ------- DAY OF THE WEEK -------- //
 
 
@@ -36,6 +26,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   displayDate();
 });
+
+// ------- LOAD FOOTER EACH RECIPE -------- //
+
+fetch('../elements/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-pages').innerHTML = data;
+  })
+  .catch(error => console.error('Error loading footer:', error));
 
 
 
