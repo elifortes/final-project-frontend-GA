@@ -1,5 +1,8 @@
 # SimplEli Recipes
 
+# https://github.com/elifortes/final-project-frontend-GA
+
+
 **SimplEli Recipes** is a web-based project showcasing a variety of delicious recipes, designed as part of the final project for the General Assembly course. This website allows users to explore categories of recipes and get cooking inspiration.
 
 ## Table of Contents
