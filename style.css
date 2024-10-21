@@ -11,9 +11,14 @@ button {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 10vh;
+  min-height: 100vh;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 80px;
 }
 
 html, body {
@@ -23,9 +28,11 @@ html, body {
   padding: 0;
 }
 
-h3 {
+
+h1, h2, h3 {
   font-size: 2rem;
 }
+
 
 
 /* ----- NAV BAR ------- */
@@ -49,8 +56,9 @@ h3 {
   border-bottom: 3px solid #ddd;
   display: flex;
   height: 70px;
-  justify-content: space-between;
-  left: 0;
+  /* justify-content: space-between;
+  left: 0; */
+  justify-content: center;
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -82,9 +90,9 @@ a {
 }
 
 .avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 40%;
 }
 
 .avatar-categories {
@@ -262,9 +270,17 @@ a {
   margin: 0;
 }
 
+.recipe-btn:hover {
+  background-color: #164863;
+  color: #fffacd;
+  transform: scale(1.6);
+  /* transition: all 0.3s ease; */
+}
+
+
 .recipe-card {
   position: relative;
-  width: 300px;
+  width: 23%;
   background-color: #f8f8f8;
   border-radius: 8px;
   overflow: hidden;
@@ -278,7 +294,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  justify-content: space-around;
 }
 
 #recipes {
@@ -310,6 +326,7 @@ a {
 .recipe-info {
   padding: 10px;
   text-align: center;
+  /* font-size: 1rem; */
 }
 
 .recipe-card h2 {
@@ -419,13 +436,15 @@ hr.section-divider {
 
 /* ----- FOOTER ------- */
 
-footer {
+#footer-pages {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-color: #1E3E62;
   padding: 30px;
   text-align: center;
   color: white;
+
+  display: block;
 }
 
 footer a {
@@ -444,4 +463,219 @@ footer .social-icons {
 
 footer p {
   margin-bottom: 20px;
+}
+
+
+
+
+
+/* ----- @MEDIA ------- */
+
+
+/* Para telas até 600px (smartphones) */
+@media (max-width: 600px) {
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .left-nav h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .right-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  footer .social-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  .recipe-card {
+    width: 100%;
+
+  }
+
+  .categories {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  h1.categories-page {
+    font-size: 1.5rem;
+  }
+
+  .latest-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .latest-recipe {
+    width: 100%;
+
+  }
+
+  .latest-recipe img {
+    width: 100%;
+    height: auto;
+  }
+
+  #recipe-details {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .img-recipe {
+    width: 100%;
+    height: auto;
+  }
+
+  .button-print {
+    text-align: center;
+  }
+
+  .content-recipe {
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .content-last-recipe {
+    width: 100%;
+    text-align: center;
+  }
+
+  .recipe-btn {
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+/* Para tablets (largura entre 600px e 900px) */
+@media (max-width: 900px) {
+  .recipe-card {
+    width: 45%;
+  }
+
+  .categories {
+    gap: 20px;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left-nav h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  main {
+    padding-top: 120px;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .left-nav {
+    padding-left: 0;
+    text-align: center;
+  }
+
+
+  .left-nav h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+
+  }
+
+  .right-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    gap: 15px;
+  }
+
+
+  .nav-item {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+
+  .avatar_date {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .welcome-text {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 }
